@@ -38,7 +38,7 @@ export default function Header() {
           
           {/* Logo avec effet */}
           <Link href="/" className="group relative">
-            <div className="w-40 h-20 flex items-center justify-center shadow-3xl"> {/* w-40 h-40 = 10rem */}
+            <div className="w-70 h-20 flex items-center justify-center shadow-3xl"> {/* w-40 h-40 = 10rem */}
               <Image
                 src="/Image/STRATOVA AGENCY LOGO TRANSPARENT-04.png"
                 alt="Stratova Logo"
@@ -68,7 +68,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="group relative bg-gradient-to-r from-[#3e4cf2] to-[#2fe7bb] text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ml-4"
+              className="group relative bg-gradient-to-r from-[#3e4cf2] to-[#2fe7bb] text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ml-1"
             >
               <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative flex items-center gap-2">
@@ -111,12 +111,12 @@ export default function Header() {
       }`} onClick={() => setIsOpen(false)}></div>
 
       {/* Mobile Menu Content */}
-      <div className={`lg:hidden fixed top-0 right-0 z-50 h-full w-80 bg-white shadow-2xl transform transition-transform duration-500 ease-out ${
+      <div className={`lg:hidden fixed top-0 right-0 z-50 h-screen w-80 bg-white shadow-2xl transform transition-transform duration-500 ease-out ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}>
-        
+
         {/* Menu Header */}
-        <div className="p-6 border-b border-gray-100">
+        <div className="p-3 border-b border-gray-100">
           <div className="text-2xl font-black">
             <span className="bg-gradient-to-r from-[#3e4cf2] to-[#2fe7bb] bg-clip-text text-transparent">
               STRATOVA
@@ -127,7 +127,7 @@ export default function Header() {
         </div>
 
         {/* Menu Items */}
-        <nav className="p-6 space-y-4">
+        <nav className="p-3 space-y-2">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -151,20 +151,7 @@ export default function Header() {
           </Link>
           
           {/* Contact Info */}
-          <div className="mt-6 space-y-3">
-            <div className="flex items-center gap-3 text-gray-600">
-              <svg className="w-5 h-5 text-[#3e4cf2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <span>+212 6 XX XX XX XX</span>
-            </div>
-            <div className="flex items-center gap-3 text-gray-600">
-              <svg className="w-5 h-5 text-[#2fe7bb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span>contact@stratova.com</span>
-            </div>
-          </div>
+          
         </div>
       </div>
     </header>
