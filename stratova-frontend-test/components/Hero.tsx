@@ -80,9 +80,7 @@ export default function Hero() {
 
               </div>
 
-              <p className="text-white/60 text-xs mt-3 tracking-widest uppercase">
-                Performance Agency
-              </p>
+              
             </div>
 
           </div>
