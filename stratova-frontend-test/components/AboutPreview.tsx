@@ -9,7 +9,7 @@ export default function AboutPreview() {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
 
-          {/* الصورة على اليسار */}
+          
           <div className="order-2 lg:order-1 flex justify-center">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-700"></div>
@@ -24,7 +24,7 @@ export default function AboutPreview() {
             </div>
           </div>
 
-          {/* النص على اليمين */}
+          
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8 leading-tight">
               About <span className="text-purple-400">STRATOVA</span> EGENSE

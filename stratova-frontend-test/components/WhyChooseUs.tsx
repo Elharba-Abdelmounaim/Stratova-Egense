@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
     <section className="py-24 lg:py-32 bg-[#0f0029]">
       <div className="container mx-auto px-6 max-w-4xl">
 
-        {/* العنوان */}
+     
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,24 +44,24 @@ export default function WhyChooseUs() {
           </p>
         </motion.div>
 
-        {/* الكروت العمودية */}
+       
         <div className="space-y-12">
           {reasons.map((reason, index) => (
             <motion.div
               key={reason.number}
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: index * 0.2 }}
+              transition={{ duration: 0.7, delay: index * 0.5 }}
               viewport={{ once: true }}
               className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 lg:p-12 hover:bg-white/10 transition-all duration-500"
             >
-              {/* الرقم الكبير في الخلفية */}
+             
               <div className="absolute -top-6 -left-4 text-9xl font-black text-white/5 select-none">
                 {reason.number}
               </div>
 
               <div className="relative flex items-start gap-8">
-                {/* الدائرة البنفسجية مع الرقم */}
+             
                 <div className="flex-shrink-0 w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-3xl font-black text-white shadow-xl">
                   {reason.number}
                 </div>
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
 
-              {/* خط خفيف تحت الكارد عند الـ hover */}
+              
               <div className="absolute bottom-0 left-10 right-10 h-1 bg-gradient-to-r from-purple-500 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}

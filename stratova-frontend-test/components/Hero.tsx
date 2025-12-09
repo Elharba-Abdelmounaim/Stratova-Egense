@@ -5,13 +5,13 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#0f0029] overflow-hidden pt-32">
+    <section className="relative min-h-screen  bg-[#0f0029] overflow-hidden pt-32">
       {/* ✅ pt-32 = المسافة مع Navbar */}
 
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-[#0f0029] to-[#0f0029]" />
 
-      <div className="relative container mx-auto px-6">
+      <div className="relative container pt-24 mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           
           {/* ✅ Left Side - Text */}
