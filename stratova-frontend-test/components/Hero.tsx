@@ -26,7 +26,7 @@ export default function Hero() {
             {/* ✅ Big Title */}
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight">
               STRATOVA{" "}
-              <span className="text-purple-500">EGINCE</span>
+              <span className="text-purple-500">AGENCY</span>
             </h1>
 
             {/* ✅ Stats */}
