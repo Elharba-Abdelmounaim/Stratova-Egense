@@ -5,63 +5,72 @@ import Link from "next/link";
 export default function ServicesPreview() {
   const services = [
     {
-      title: "Performance publicitaire",
-      description:
-        "Génération de leads de qualité et augmentation des ventes grâce à des stratégies publicitaires optimisées pour chaque canal.",
-      icon: "/Image/STRATOVA AGENCY-03.png",
+      title: "PERFORMANCE PUBLICITAIRE",
+      desc: "Dans le monde de la performance publicitaire, Markethelp se distingue par sa capacité à générer des leads de qualité et à stimuler les ventes de manière significative.",
     },
     {
-      title: "Création de sites web",
-      description:
-        "Conception de sites professionnels, boutiques en ligne ou blogs captivants, reflétant l’identité de votre marque et attirant votre audience.",
-      icon: "/Image/STRATOVA AGENCY-04.png",
+      title: "CRÉATION DE SITE WEB",
+      desc: "Avec Markethelp, créez votre site web sur mesure et réalisez vos ambitions en ligne. Qu’il s’agisse d’une vitrine professionnelle, d’une boutique en ligne ou d’un blog captivant.",
     },
     {
-      title: "Branding & identité visuelle",
-      description:
-        "Développement d’une identité visuelle complète : couleurs, typographie et charte graphique, pour une marque mémorable et professionnelle.",
-      icon: "/Image/STRATOVA AGENCY-05.png",
+      title: "VIDÉOS UGC AVEC MICRO-INFLUENCEURS",
+      desc: "Dynamisez votre présence en ligne avec nos vidéos UGC créées en collaboration avec plus de 400 micro-influenceurs.",
     },
     {
-      title: "Vidéos UGC",
-      description:
-        "Collaboration avec plus de 400 micro-influenceurs pour créer des vidéos authentiques et engageantes qui renforcent votre présence en ligne.",
-      icon: "/Image/STRATOVA AGENCY-06.png", // خذ صورة جديدة أو placeholder
+      title: "BRANDING",
+      desc: "Le branding chez Markethelp est bien plus qu’une simple création de logo. C’est un processus méticuleux qui façonne l’identité visuelle de votre entreprise.",
     },
   ];
 
   return (
-    <section className="bg-[#f8fffd] py-20">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#3e4cf2] mb-12">
-          Nos Services
-        </h2>
+    <section className="py-24 bg-[#0f0029]">
+      <div className="container mx-auto px-6 max-w-7xl">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+        {/* ✅ SERVICES Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight">
+            SERVICES
+          </h2>
+          <p className="text-white/50 text-lg">
+            Exploration approfondie de nos offres de services et solutions personnalisées
+          </p>
+        </div>
+
+        {/* ✅ 4 Services Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto mb-20">
+          {services.map((service, i) => (
             <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300"
+              key={i}
+              className="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-purple-600/30 transition-all duration-300"
             >
-              <img
-                src={service.icon}
-                alt={service.title}
-                className="w-16 h-16 mx-auto mb-4"
-                loading="lazy"
-              />
-              <h3 className="text-xl font-semibold text-[#3e4cf2] mb-2">
+              <h3 className="text-xl font-black text-[#0f0029] uppercase tracking-wider mb-6">
                 {service.title}
               </h3>
-              <p className="text-gray-800 mb-4">{service.description}</p>
-              <Link
-                href="/services"
-                className="text-[#fc33fd] font-semibold hover:underline"
-              >
-                Learn More
-              </Link>
+              <p className="text-gray-700 leading-relaxed">
+                {service.desc}
+              </p>
             </div>
           ))}
         </div>
+
+        {/* ✅ Bottom CTA Card */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-black rounded-3xl p-12 text-center">
+            <h3 className="text-4xl font-black text-white mb-6">
+              PRÊT À PASSER À L’ÉCHELLE ?
+            </h3>
+            <p className="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+              Tout ce dont vous avez besoin pour booster votre croissance : stratégie, développement web, branding, publicité, contenu… sur une plateforme simple.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-[#0f0029] px-12 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl"
+            >
+              Contactez-Nous
+            </Link>
+          </div>
+        </div>
+
       </div>
     </section>
   );

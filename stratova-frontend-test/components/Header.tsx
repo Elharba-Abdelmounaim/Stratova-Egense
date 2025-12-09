@@ -1,10 +1,10 @@
-// app/components/Header.tsx
-"use client"; // ضروري فـ Next.js App Router باش يكون Component client-side
+
+"use client"; 
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false); // حالة الهامبرغر للموبايل
+  const [isOpen, setIsOpen] = useState(false); 
 
   const toggleMenu = () => setIsOpen(!isOpen);
 

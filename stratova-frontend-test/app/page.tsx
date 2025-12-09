@@ -11,6 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <CallToAction />
       <AboutPreview />
       <ServicesPreview />
       <WhyChooseUs />

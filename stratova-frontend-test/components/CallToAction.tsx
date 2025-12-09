@@ -3,14 +3,21 @@ import Link from "next/link";
 
 const CallToAction = () => {
   return (
-    <section className="py-20 bg-blue-600  text-white text-center">
-      <h2 className="text-3xl font-bold mb-4">Ready to grow your business?</h2>
-      <p className="mb-6">Contact us today and let is build your next project.</p>
-      <Link href="/contact">
-        <button className="bg-white text-blue-600 px-6 py-3 rounded hover:bg-gray-200">
-          Contact Us
-        </button>
-      </Link>
+    <section className="py-20 bg-[#0f0029] text-white">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-4xl md:text-6xl font-black mb-6">
+          Prêt à booster votre business ?
+        </h2>
+
+        
+
+        <Link
+          href="/contact"
+          className="inline-block bg-white text-[#0f0029] px-12 py-5 rounded-full text-xl font-bold hover:bg-gray-100 transition shadow-lg"
+        >
+          Contactez-Nous
+        </Link>
+      </div>
     </section>
   );
 };
